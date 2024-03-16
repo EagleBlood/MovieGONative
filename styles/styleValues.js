@@ -1,4 +1,6 @@
 export const dimensions = {
+    appPadding: 30,
+
     smallTextSize: 12,
     normalTextSize: 16,
     largeTextSize: 20,
@@ -10,7 +12,7 @@ export const dimensions = {
     itemMargin: 15,
 };
 
-export const colorDark = {
+export const colors = {
     appBg: '#141217',
     appFirstColor: '#333333',  // dark grey     | buttonsInactive
     appSecColor: '#FC094B',    // pink          | buttonsActive, highlights

@@ -5,7 +5,7 @@ import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, 
 import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './screens/Home'; // Import your Home screen
+import Home from './screens/Home';
 import MovieDetails from './screens/MovieDetails';
 import Profile from './screens/Profile';
 import Tickets from './screens/Tickets';

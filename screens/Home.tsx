@@ -32,12 +32,12 @@ type Props = {
 
 function Home({ navigation}: Props): React.JSX.Element {
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.homeContainer}>
             {/* Welcome div */}
             <View style={styles.welcomeContainer}>
-                <View style={styles.welcomeTextDiv}>
-                    <Text style={styles.headerText}>Hello, |userName|</Text>
-                    <Text style={styles.text}>Want to go see a movie? Get your ticket today</Text>
+                <View style={styles.welcomeDiv}>
+                    <Text style={styles.headerText}>Witaj, |userName|</Text>
+                    <Text style={styles.text}>Chcesz iść na film? Kup bilety teraz!</Text>
                 </View>
     
                 {/*<View style={styles.welcomeMenuDiv}>
@@ -62,7 +62,7 @@ function Home({ navigation}: Props): React.JSX.Element {
 
             {/* 1PM div */}
             <View style={styles.movieContainer}>
-                <Text style={styles.headerText}>1PM</Text>
+                <Text style={styles.homeHeaderText}>1PM</Text>
 
                 <ScrollView horizontal={true}>
                     <View style={styles.movieDiv}>  
