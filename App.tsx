@@ -13,6 +13,7 @@ import Hall from './screens/Hall';
 import Login from './screens/Login';
 import ForgotPass from './screens/ForgotPass';
 import Register from './screens/Register';
+import styles from './styles/styleApp';
 
 type RootStackParamList = {
   Home: undefined;
@@ -34,25 +35,19 @@ function App(): React.JSX.Element {
       <StatusBar/>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="MovieDetails" component={MovieDetails} />
-          <Stack.Screen name="Profile" component={Profile} />
-          <Stack.Screen name="Tickets" component={Tickets} />
-          <Stack.Screen name="Hall" component={Hall} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="ForgotPass" component={ForgotPass} />
-          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+          <Stack.Screen name="MovieDetails" component={MovieDetails} options={{ headerShown: false }} />
+          <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+          <Stack.Screen name="Tickets" component={Tickets} options={{ headerShown: false }} />
+          <Stack.Screen name="Hall" component={Hall} options={{ headerShown: false }} />
+          <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+          <Stack.Screen name="ForgotPass" component={ForgotPass} options={{ headerShown: false }} />
+          <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 
 export default App;
