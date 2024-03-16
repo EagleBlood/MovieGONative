@@ -1,59 +1,82 @@
-import React, { useState } from 'react';
-import { View, Text, Button, TextInput, Alert } from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
+import styles from '../styles/styleDark.js';
 
 type RootStackParamList = {
-  Login: undefined;
-  Register: undefined;
+    Login: undefined;
+    Register: undefined;
 };
 
 type NavigationProp = StackNavigationProp<RootStackParamList, 'Register'>;
 
 const Register = () => {
-  const navigation = useNavigation<NavigationProp>();
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+    const navigation = useNavigation<NavigationProp>();
+    const [username, setUsername] = useState('');
+    const [userMail, setUserMail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
-  const register = () => {
-    if (password !== confirmPassword) {
-      Alert.alert('Error', 'Passwords do not match');
-      return;
-    }
-    // Registration logic here
-    navigation.goBack();
-  };
+    const handleLogin = () => {
+        navigation.navigate('Login');
+    };
 
-  return (
-    <View>
-      <Text>Register Screen</Text>
-      <TextInput
-        value={username}
-        onChangeText={setUsername}
-        placeholder="Username"
-      />
-      <TextInput
-        value={email}
-        onChangeText={setEmail}
-        placeholder="Email"
-      />
-      <TextInput
-        value={password}
-        onChangeText={setPassword}
-        placeholder="Password"
-        secureTextEntry
-      />
-      <TextInput
-        value={confirmPassword}
-        onChangeText={setConfirmPassword}
-        placeholder="Confirm Password"
-        secureTextEntry
-      />
-      <Button title="Register" onPress={register} />
-    </View>
-  );
+    return (
+        <View style={styles.loginRegisterContainer}>
+            <View style={styles.gapContainer}>
+                <Text style={styles.headerText}>Stwórz swoje konto w serwisie <Text style={styles.highlightText}> MovieGO</Text></Text>
+
+                <View style={styles.separator}/>
+
+                <TextInput style={styles.input}
+                           placeholder="Adres e-mail"
+                           value={userMail}
+                           onChangeText={setUserMail}
+                           autoCapitalize="none"
+                           placeholderTextColor={styles.input.color}
+                />
+                <TextInput style={styles.input}
+                           placeholder="Nazwa użytkownika"
+                           value={username}
+                           onChangeText={setUsername}
+                           autoCapitalize="none"
+                           placeholderTextColor={styles.input.color}
+                />
+                <TextInput style={styles.input}
+                           placeholder="Hasło"
+                           value={password}
+                           onChangeText={setPassword}
+                           autoCapitalize="none"
+                           secureTextEntry={true}
+                           placeholderTextColor={styles.input.color}
+                />
+                <TextInput style={styles.input}
+                           placeholder="Potwierdź hasło"
+                           value={confirmPassword}
+                           onChangeText={setConfirmPassword}
+                           autoCapitalize="none"
+                           secureTextEntry={true}
+                           placeholderTextColor={styles.input.color}
+                />
+
+
+                <View style={styles.separator}/>
+
+                <TouchableOpacity onPress={handleLogin} style={styles.button}>
+                    <Text style={styles.buttonText}>Zarejestruj się</Text>
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity onPress={handleLogin}>
+                <Text style={styles.lr_bottomText}>
+                    Masz konta w serwisie
+                    <Text style={styles.highlightText}> MovieGO</Text>
+                    ?
+                    <Text style={styles.boldText}> Zaloguj się</Text>
+                </Text>
+            </TouchableOpacity>
+        </View>
+    );
 };
 
 export default Register;
