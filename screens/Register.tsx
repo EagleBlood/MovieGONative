@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import styles from '../styles/styleDark.js';
+import styles from '../styles/styleValues.js';
 
 type RootStackParamList = {
     Login: undefined;

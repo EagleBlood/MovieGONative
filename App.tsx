@@ -12,8 +12,8 @@ import Hall from './screens/Hall';
 import Login from './screens/Login';
 import ForgotPass from './screens/ForgotPass';
 import Register from './screens/Register';
-import styles from './styles/styleApp';
 import ForgotEmail from './screens/ForgotEmail';
+import styles from './styles/styleApp.js';
 
 type RootStackParamList = {
   Home: undefined;

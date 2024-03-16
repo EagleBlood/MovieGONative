@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import styles from '../styles/styleDark.js';
-import {colors, dimensions} from '../styles/styleValues.js';
+import styles from '../styles/styleValues.js';
+import {colors, dimensions} from '../styles/styleDark.js';
 
 type RootStackParamList = {
     Home: undefined;
