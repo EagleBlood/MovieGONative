@@ -66,14 +66,17 @@ const Login = () => {
                     <Text style={styles.buttonText}>Zaloguj się</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={handleRegister}>
-                <Text style={styles.lr_bottomText}>
-                    Nie masz konta w serwisie
-                    <Text style={styles.highlightText}> MovieGO</Text>
-                    ?
-                    <Text style={styles.boldText}> Załóż konto</Text>
-                </Text>
-            </TouchableOpacity>
+            <View style={styles.gapContainer}>
+                <TouchableOpacity onPress={handleRegister}>
+                    <Text style={styles.lr_bottomText}>
+                        Nie masz konta w serwisie
+                        <Text style={styles.highlightText}> MovieGO</Text>
+                        ?
+                        <Text style={styles.boldText}> Załóż konto</Text>
+                    </Text>
+                </TouchableOpacity>
+            </View>
+
         </View>
     );
 };

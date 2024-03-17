@@ -15,8 +15,9 @@ export const dimensions = {
     paddingLeftRight: 20,
 
     itemMargin: 15,
-    itemGap: 7,
+    itemGap: 10,
     separator: 25,
+    smallSeparator: 15,
 };
 
 export const colors = {

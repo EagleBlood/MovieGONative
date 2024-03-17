@@ -67,14 +67,17 @@ const Register = () => {
                     <Text style={styles.buttonText}>Zarejestruj się</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={handleLogin}>
-                <Text style={styles.lr_bottomText}>
-                    Masz konta w serwisie
-                    <Text style={styles.highlightText}> MovieGO</Text>
-                    ?
-                    <Text style={styles.boldText}> Zaloguj się</Text>
-                </Text>
-            </TouchableOpacity>
+
+            <View style={styles.gapContainer}>
+                <TouchableOpacity onPress={handleLogin}>
+                    <Text style={styles.lr_bottomText}>
+                        Masz konta w serwisie
+                        <Text style={styles.highlightText}> MovieGO</Text>
+                        ?
+                        <Text style={styles.boldText}> Zaloguj się</Text>
+                    </Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 };

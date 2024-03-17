@@ -11,10 +11,6 @@ export default StyleSheet.create({
         flex: 1,
         display: 'flex',
         backgroundColor: colors.appBg,
-        paddingTop: dimensions.paddingTopBottom,
-        paddingLeft: dimensions.paddingLeftRight,
-        paddingRight: dimensions.paddingLeftRight,
-        paddingBottom: dimensions.paddingTopBottom,
         justifyContent: 'space-between',
     },
 
@@ -134,6 +130,12 @@ export default StyleSheet.create({
         paddingLeft: dimensions.inputPadding,
     },
 
+    passwordContainer: {
+      display:'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+
     checkbox: {
         backgroundColor: 'transparent',
         borderWidth: 0,
@@ -160,10 +162,18 @@ export default StyleSheet.create({
     gapContainer: {
         display: 'flex',
         gap: dimensions.itemGap,
+        paddingTop: dimensions.paddingTopBottom,
+        paddingLeft: dimensions.paddingLeftRight,
+        paddingRight: dimensions.paddingLeftRight,
+        paddingBottom: dimensions.paddingTopBottom,
     },
 
     separator: {
         height: dimensions.separator,
+    },
+
+    smallSeparator: {
+        height: dimensions.smallSeparator,
     },
 
 
