@@ -135,6 +135,7 @@ export default StyleSheet.create({
         width: '90%',
         color: colors.appThirdColor,
         fontSize: dimensions.smallTextSize,
+        padding: 0,
     },
 
     passwordContainer: {

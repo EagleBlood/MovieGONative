@@ -36,7 +36,7 @@ const ForgotPass = () => {
         <View style={styles.loginRegisterContainer}>
             <View style={styles.gapContainer}>
                 <Text style={styles.headerText}>Zresetuj hasło</Text>
-                <Text style={styles.grayText}>Podaj nowe hasło.</Text>
+                <Text style={styles.grayText}>Podaj nowe hasło</Text>
 
                 <View style={styles.separator}/>
 
