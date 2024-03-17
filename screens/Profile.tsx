@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import styles from "../styles/styleValues.js";
-import {colors, dimensions} from "../styles/styleDark.js";
-import Entypo from '@react-native-vector-icons/entypo';
+import styles from '../styles/styleValues.js';
+import {colors, dimensions} from '../styles/styleDark.js';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import tw from 'twrnc';
 
 type RootStackParamList = {
@@ -29,7 +29,7 @@ const Profile = () => {
     const [birthDate, setBirthDate] = useState('');
 
     const togglePassword = () => {
-        setShowPassword(true);
+        setShowPassword(!showPassword);
     };
 
   return (
@@ -67,7 +67,7 @@ const Profile = () => {
 
               <View style={[styles.input, tw`flex flex-row items-center justify-between`]}>
                   <TextInput
-
+                      style={styles.inputText}
                       placeholder="Hasło"
                       value={password}
                       autoCapitalize="none"
@@ -78,9 +78,9 @@ const Profile = () => {
 
                   <TouchableOpacity onPress={togglePassword}>
                       {showPassword ? (
-                          <Icon name="eye" size={30} color="#900" />
+                          <Icon name="eye" style={styles.icon}/>
                       ):(
-                          <Icon name="eye-with-line" size={30} color="#900" />
+                          <Icon name="eye-slash" style={styles.icon}/>
                       )}
                   </TouchableOpacity>
               </View>

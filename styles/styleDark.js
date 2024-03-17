@@ -18,6 +18,8 @@ export const dimensions = {
     itemGap: 10,
     separator: 25,
     smallSeparator: 15,
+
+    iconSize: 20,
 };
 
 export const colors = {

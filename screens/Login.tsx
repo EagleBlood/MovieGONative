@@ -4,6 +4,8 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import styles from '../styles/styleValues.js';
 import {colors, dimensions} from '../styles/styleDark.js';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import tw from 'twrnc';
 
 type RootStackParamList = {
     Home: undefined;
@@ -21,6 +23,7 @@ const Login = () => {
     const navigation = useNavigation<NavigationProp>();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(true);
 
     const handleLogin = () => {
         navigation.navigate('Home');
@@ -30,6 +33,10 @@ const Login = () => {
     };
     const handleForgotPassword = () => {
         navigation.navigate('ForgotEmail');
+    };
+
+    const togglePassword = () => {
+        setShowPassword(!showPassword);
     };
 
     return (
@@ -47,14 +54,26 @@ const Login = () => {
                            autoCapitalize="none"
                            placeholderTextColor={styles.input.color}
                 />
-                <TextInput style={styles.input}
-                           placeholder="Hasło"
-                           value={password}
-                           onChangeText={setPassword}
-                           autoCapitalize="none"
-                           secureTextEntry={true}
-                           placeholderTextColor={styles.input.color}
-                />
+
+                <View style={[styles.input, tw`flex flex-row items-center justify-between`]}>
+                    <TextInput
+                        style={styles.inputText}
+                        placeholder="Hasło"
+                        value={password}
+                        autoCapitalize="none"
+                        secureTextEntry={showPassword}
+                        placeholderTextColor={styles.input.color}
+                        onChangeText = {(text) => setPassword(text)}
+                    />
+
+                    <TouchableOpacity onPress={togglePassword}>
+                        {showPassword ? (
+                            <Icon name="eye" style={styles.icon}/>
+                        ):(
+                            <Icon name="eye-slash" style={styles.icon}/>
+                        )}
+                    </TouchableOpacity>
+                </View>
 
                 <TouchableOpacity onPress={handleForgotPassword}>
                     <Text style={localStyles.forgotPassword}>Zapomniałeś hasła?</Text>

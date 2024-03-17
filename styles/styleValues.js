@@ -128,6 +128,13 @@ export default StyleSheet.create({
         borderColor: colors.appThirdColor,
         borderRadius: dimensions.inputRadius,
         paddingLeft: dimensions.inputPadding,
+        paddingRight: dimensions.inputPadding,
+    },
+
+    inputText: {
+        width: '90%',
+        color: colors.appThirdColor,
+        fontSize: dimensions.smallTextSize,
     },
 
     passwordContainer: {
@@ -183,6 +190,12 @@ export default StyleSheet.create({
         color: colors.textColor,
         textAlign: 'center',
         fontSize: dimensions.smallTextSize,
+    },
+
+    icon: {
+        fontSize: dimensions.iconSize,
+        color:colors.appThirdColor
+
     },
 
 });
