@@ -48,17 +48,19 @@ function Home({ navigation}: Props): React.JSX.Element {
             </View>
 
             {/* Calendar div */}
-            <View style={styles.calendarContainer}>
-                <View style={styles.calendarItem}>
-                    <Text style={styles.text}>|day|</Text>
-                    <Text style={styles.headerText}>|date|</Text>
-                </View>
+            <ScrollView horizontal={true}>
+                <View style={styles.calendarContainer}>
+                    <View style={styles.calendarItem}>
+                        <Text style={styles.text}>|day|</Text>
+                        <Text style={styles.headerText}>|date|</Text>
+                    </View>
 
-                <View style={styles.calendarItem}>
-                    <Text style={styles.text}>|day|</Text>
-                    <Text style={styles.headerText}>|date|</Text>
+                    <View style={styles.calendarItem}>
+                        <Text style={styles.text}>|day|</Text>
+                        <Text style={styles.headerText}>|date|</Text>
+                    </View>
                 </View>
-            </View>
+            </ScrollView>
 
             {/* 1PM div */}
             <View style={styles.movieContainer}>

@@ -10,6 +10,7 @@ export const dimensions = {
     buttonInsidePadding: 3,
 
     itemMargin: 15,
+    itemPadding: 10,
 };
 
 export const colors = {

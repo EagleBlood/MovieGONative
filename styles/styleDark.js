@@ -58,10 +58,10 @@ export default StyleSheet.create({
     welcomeContainer: {
         marginLeft: dimensions.appPadding,
         marginRight: dimensions.appPadding,
-        backgroundColor: "red",
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+        padding: dimensions.itemPadding,
     },
 
     welcomeDiv: {
@@ -74,34 +74,46 @@ export default StyleSheet.create({
 
 
     calendarContainer: {
-        backgroundColor: "blue",
         flexDirection: 'row',
+        paddingTop: dimensions.itemPadding,
+        paddingBottom: dimensions.itemPadding,
+        marginRight: dimensions.itemMargin,
+        
     },
 
     calendarItem: {
-        backgroundColor: "darkblue",
+        backgroundColor: colors.appFirstColor,
         alignItems: 'center',
-        marginRight: dimensions.itemMargin,
+        padding: dimensions.itemPadding,
+        borderRadius: dimensions.buttonRadius,
+        marginLeft: dimensions.itemMargin,
+
     },
 
 
     movieContainer: {
-        backgroundColor: "green",
         flexDirection: 'column',
+        paddingTop: dimensions.itemPadding,
+        paddingBottom: dimensions.itemPadding,
     },
 
     movieDiv: {
         flexDirection: 'row',
+        marginRight: dimensions.itemMargin,
+        paddingTop: dimensions.itemPadding,
+        paddingBottom: dimensions.itemPadding,
     },
 
     movieItemDiv: {
-        height: 200,
+        height: 320,
         width: 200,
         alignItems: 'flex-end',
         flexDirection: 'row',
         padding: dimensions.buttonPadding,
-        backgroundColor: "darkgreen",
-        marginRight: dimensions.itemMargin,
+        backgroundColor: colors.appFirstColor,
+        borderRadius: dimensions.buttonRadius,
+        marginLeft: dimensions.itemMargin,
+
     },
 
     movieTitleItemText: {
