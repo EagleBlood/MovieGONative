@@ -210,5 +210,40 @@ export default StyleSheet.create({
         flexWrap: 'wrap',
         flexShrink: 1,
     },
+
+
+    movieDetailsPoster: {
+        flex: 1,
+        backgroundColor: colors.appFirstColor,
+        height: 450,
+    },
+
+    movieDetailsTitleDiv: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: dimensions.itemPadding,
+        paddingBottom: dimensions.itemPadding,
+    },
+
+    movieDetailsInfoDiv: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        backgroundColor: colors.appThirdColor,
+
+    },
+
+    movieDetailsTypeDiv: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: dimensions.itemPadding,
+        paddingBottom: dimensions.itemPadding,
+    },
+
+    movieDetailsDescDiv: {
+        paddingBottom: dimensions.itemPadding,
+    },
     
 });
