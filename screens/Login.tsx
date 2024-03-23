@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import styles from '../styles/styleValues.js';
-import {colors, dimensions} from '../styles/styleDark.js';
+import styles from '../styles/styleDark.js';
+import {colors, dimensions} from '../styles/styleValues.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import tw from 'twrnc';
 
@@ -52,7 +52,7 @@ const Login = () => {
                            value={username}
                            onChangeText={setUsername}
                            autoCapitalize="none"
-                           placeholderTextColor={styles.input.color}
+                           placeholderTextColor={colors.appThirdColor}
                 />
 
                 <View style={[styles.input, tw`flex flex-row items-center justify-between`]}>
@@ -62,14 +62,14 @@ const Login = () => {
                         value={password}
                         autoCapitalize="none"
                         secureTextEntry={showPassword}
-                        placeholderTextColor={styles.input.color}
+                        placeholderTextColor={colors.appThirdColor}
                         onChangeText = {(text) => setPassword(text)}
                     />
 
                     <TouchableOpacity onPress={togglePassword}>
                         {showPassword ? (
                             <Icon name="eye" style={styles.icon}/>
-                        ):(
+                        ) : (
                             <Icon name="eye-slash" style={styles.icon}/>
                         )}
                     </TouchableOpacity>

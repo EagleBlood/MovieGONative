@@ -101,7 +101,7 @@ export default StyleSheet.create({
         paddingTop: dimensions.itemPadding,
         paddingBottom: dimensions.itemPadding,
         marginRight: dimensions.itemMargin,
-        
+
     },
 
     calendarItem: {
@@ -145,7 +145,7 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         flex: 1,
         flexWrap: 'wrap',
-        flexShrink: 1, 
+        flexShrink: 1,
         textAlign: 'left',
     },
 
@@ -290,7 +290,7 @@ export default StyleSheet.create({
     },
 
     hallFlatList: {
-        
+
     },
 
     hallSeatsDescDiv: {
@@ -339,5 +339,115 @@ export default StyleSheet.create({
         padding: dimensions.buttonPadding,
         borderRadius: dimensions.buttonRadius,
     },
-    
+    loginRegisterContainer: {
+        flex: 1,
+        display: 'flex',
+        backgroundColor: colors.appBg,
+        justifyContent: 'space-between',
+    },
+    grayText: {
+        color: colors.appThirdColor,
+        fontSize: dimensions.smallTextSize,
+
+        // EXPERIMENTAL
+        flexWrap: 'wrap',
+        flexShrink: 1,
+    },
+
+    buttonText:{
+        color: colors.textColor,
+        textAlign: 'center',
+        fontSize: dimensions.normalTextSize,
+    },
+
+    welcomeTextDiv: {
+        alignItems: 'center',
+    },
+
+    welcomeMenuDiv: {
+        alignItems: 'center',
+    },
+
+    input: {
+        width: '100%',
+        height: dimensions.inputHigh,
+        backgroundColor: 'transparent',
+        color: colors.appThirdColor,
+        borderWidth: 1,
+        fontSize: dimensions.smallTextSize,
+        borderColor: colors.appThirdColor,
+        borderRadius: dimensions.inputRadius,
+        paddingLeft: dimensions.inputPadding,
+        paddingRight: dimensions.inputPadding,
+    },
+
+    inputText: {
+        width: '90%',
+        color: colors.appThirdColor,
+        fontSize: dimensions.smallTextSize,
+        padding: 0,
+    },
+
+    passwordContainer: {
+        display:'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+
+    checkbox: {
+        backgroundColor: 'transparent',
+        borderWidth: 0,
+        padding: 0,
+        margin: 0,
+    },
+
+    loginElementsContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+
+    boldText: {
+        fontWeight: 'bold',
+    },
+
+    highlightText: {
+        color: colors.appSecColor,
+    },
+
+
+    gapContainer: {
+        display: 'flex',
+        gap: dimensions.itemGap,
+        paddingTop: dimensions.paddingTopBottom,
+        paddingLeft: dimensions.paddingLeftRight,
+        paddingRight: dimensions.paddingLeftRight,
+        paddingBottom: dimensions.paddingTopBottom,
+    },
+
+    separator: {
+        height: dimensions.separator,
+    },
+
+    smallSeparator: {
+        height: dimensions.smallSeparator,
+    },
+
+
+    // Login Register Screens
+
+    lr_bottomText: {
+        color: colors.textColor,
+        textAlign: 'center',
+        fontSize: dimensions.smallTextSize,
+    },
+
+    icon: {
+        fontSize: dimensions.iconSize,
+        color:colors.appThirdColor
+
+    },
+
+
 });

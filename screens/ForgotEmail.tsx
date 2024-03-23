@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import styles from '../styles/styleValues.js';
+import styles from '../styles/styleDark.js';
 
 type RootStackParamList = {
     Login: undefined;
@@ -39,7 +39,7 @@ const ForgotEmail = () => {
                            value={email}
                            onChangeText={setEmail}
                            autoCapitalize="none"
-                           placeholderTextColor={styles.input.color}
+                           placeholderTextColor={styles.input.backgroundColor}
                 />
                 <View style={styles.separator}/>
 

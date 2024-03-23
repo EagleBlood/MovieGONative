@@ -14,6 +14,18 @@ export const dimensions = {
 
     seatItemWidth: '10%',
     seatItemMargin: '0.5%',
+    inputRadius: 15,
+    inputPadding: 15,
+    inputHigh: 43,
+
+    paddingTopBottom: 40,
+    paddingLeftRight: 20,
+
+    itemGap: 10,
+    separator: 25,
+    smallSeparator: 15,
+
+    iconSize: 20,
 };
 
 export const colors = {

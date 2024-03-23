@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import styles from '../styles/styleValues.js';
+import styles from '../styles/styleDark.js';
 import tw from 'twrnc';
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import {colors} from "../styles/styleValues.js";
 
 type RootStackParamList = {
     Login: undefined;
@@ -46,14 +47,14 @@ const Register = () => {
                            value={userMail}
                            onChangeText={setUserMail}
                            autoCapitalize="none"
-                           placeholderTextColor={styles.input.color}
+                           placeholderTextColor={colors.appThirdColor}
                 />
                 <TextInput style={styles.input}
                            placeholder="Nazwa użytkownika"
                            value={username}
                            onChangeText={setUsername}
                            autoCapitalize="none"
-                           placeholderTextColor={styles.input.color}
+                           placeholderTextColor={colors.appThirdColor}
                 />
                 <View style={[styles.input, tw`flex flex-row items-center justify-between`]}>
                     <TextInput
@@ -62,14 +63,14 @@ const Register = () => {
                         value={password}
                         autoCapitalize="none"
                         secureTextEntry={showPassword}
-                        placeholderTextColor={styles.input.color}
+                        placeholderTextColor={colors.appThirdColor}
                         onChangeText = {(text) => setPassword(text)}
                     />
 
                     <TouchableOpacity onPress={togglePassword}>
                         {showPassword ? (
                             <Icon name="eye" style={styles.icon}/>
-                        ):(
+                        ) : (
                             <Icon name="eye-slash" style={styles.icon}/>
                         )}
                     </TouchableOpacity>
@@ -82,14 +83,14 @@ const Register = () => {
                         value={confirmPassword}
                         autoCapitalize="none"
                         secureTextEntry={showConfirmPassword}
-                        placeholderTextColor={styles.input.color}
+                        placeholderTextColor={colors.appThirdColor}
                         onChangeText = {(text) => setConfirmPassword(text)}
                     />
 
                     <TouchableOpacity onPress={toggleConfirmPassword}>
                         {showConfirmPassword ? (
                             <Icon name="eye" style={styles.icon}/>
-                        ):(
+                        ) : (
                             <Icon name="eye-slash" style={styles.icon}/>
                         )}
                     </TouchableOpacity>

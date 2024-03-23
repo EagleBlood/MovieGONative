@@ -69,7 +69,7 @@ const Profile = () => {
                     value={username}
                     onChangeText={setUsername}
                     autoCapitalize="none"
-                    placeholderTextColor={styles.input.color}
+                    placeholderTextColor={colors.appThirdColor}
                     editable={changeLogin}
                 />
                 <View style={styles.smallSeparator}/>
@@ -86,7 +86,7 @@ const Profile = () => {
                         value={password}
                         autoCapitalize="none"
                         secureTextEntry={showPassword}
-                        placeholderTextColor={styles.input.color}
+                        placeholderTextColor={colors.appThirdColor}
                         onChangeText={(text) => setPassword(text)}
                         editable={false}
                     />
@@ -116,7 +116,7 @@ const Profile = () => {
                                value={name}
                                onChangeText={setName}
                                autoCapitalize="none"
-                               placeholderTextColor={styles.input.color}
+                               placeholderTextColor={colors.appThirdColor}
                                editable={changeData}
                     />
                 </View>
@@ -127,7 +127,7 @@ const Profile = () => {
                                value={surname}
                                onChangeText={setSurname}
                                autoCapitalize="none"
-                               placeholderTextColor={styles.input.color}
+                               placeholderTextColor={colors.appThirdColor}
                                editable={changeData}
                     />
                 </View>
@@ -138,7 +138,7 @@ const Profile = () => {
                                value={email}
                                onChangeText={setEmail}
                                autoCapitalize="none"
-                               placeholderTextColor={styles.input.color}
+                               placeholderTextColor={colors.appThirdColor}
                                editable={changeData}
                     />
                 </View>
@@ -149,7 +149,7 @@ const Profile = () => {
                                value={phoneNumber}
                                onChangeText={setPhoneNumber}
                                autoCapitalize="none"
-                               placeholderTextColor={styles.input.color}
+                               placeholderTextColor={colors.appThirdColor}
                                editable={changeData}
                     />
                 </View>
@@ -160,7 +160,7 @@ const Profile = () => {
                                value={homeAddress}
                                onChangeText={setHomeAddress}
                                autoCapitalize="none"
-                               placeholderTextColor={styles.input.color}
+                               placeholderTextColor={colors.appThirdColor}
                                editable={changeData}
                     />
                 </View>
@@ -171,7 +171,7 @@ const Profile = () => {
                                value={birthDate}
                                onChangeText={setBirthDate}
                                autoCapitalize="none"
-                               placeholderTextColor={styles.input.color}
+                               placeholderTextColor={colors.appThirdColor}
                                editable={changeData}
                     />
                 </View>
