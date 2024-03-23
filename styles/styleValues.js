@@ -4,6 +4,7 @@ export const dimensions = {
     smallTextSize: 12,
     normalTextSize: 16,
     largeTextSize: 20,
+    hugeTextSize: 30,
 
     buttonRadius: 15,
     buttonPadding: 10,
@@ -23,6 +24,7 @@ export const dimensions = {
     paddingLeftRight: 20,
 
     itemGap: 10,
+    itemGapBig: 20,
     separator: 25,
     smallSeparator: 15,
 

@@ -258,7 +258,7 @@ export default StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: colors.appFirstColor,
+        backgroundColor: colors.appBg,
 
     },
 
@@ -277,8 +277,8 @@ export default StyleSheet.create({
     hallSelectionContainer: {
         padding: dimensions.appPadding,
         flexDirection: 'column',
-        justifyContent: 'space-between',
         flex: 1,
+        gap: dimensions.itemGap,
     },
 
     hallTitleDiv: {
@@ -309,18 +309,19 @@ export default StyleSheet.create({
         margin: dimensions.seatItemMargin,
         justifyContent: 'center',
         alignItems: 'center',
-        width: dimensions.seatItemWidth, // Replace with the desired width
-        height: dimensions.seatItemHeight, // Replace with the desired height
+        width: dimensions.seatItemWidth,
+        height: dimensions.seatItemHeight,
     },
 
     hallSeatsSelectionContainer: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
+        flex: 1,
+        flexDirection: 'column',
+
         padding: dimensions.appPadding,
         backgroundColor: colors.appWhite,
         borderTopLeftRadius: dimensions.buttonRadius,
         borderTopRightRadius: dimensions.buttonRadius,
+        gap: dimensions.itemGap,
     },
 
     hallSeatAvailable: {
@@ -343,6 +344,68 @@ export default StyleSheet.create({
         padding: dimensions.buttonPadding,
         borderRadius: dimensions.buttonRadius,
     },
+
+    hallSelectedSeatsDiv: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    hallSelectedSeatsItem: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: dimensions.itemGapBig,
+    },
+
+    hallSelectedSeatsItemText: {
+        backgroundColor: colors.appSecColor,
+        padding: dimensions.buttonPadding,
+        borderRadius: dimensions.buttonRadius,
+        color: colors.textColor,
+    },
+
+    hallSelectedSeatsFinalizeDiv: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+
+    },
+    
+    hallTitleItemText: {
+        color: colors.textColorSec,
+        fontSize: dimensions.largeTextSize,
+        
+        flex: 1,
+        flexWrap: 'wrap',
+        textAlign: 'left',
+    },
+
+    hallScoreItemText: {
+        color: colors.textColorS,
+        fontSize: dimensions.normalTextSize,
+        padding: dimensions.buttonPadding,
+        backgroundColor: colors.appSecColor,
+        borderRadius: dimensions.buttonRadius,
+        textAlign: 'right',
+        flexShrink: 0,
+    },
+
+    hallItemDiv: {
+        alignItems: 'center',
+        flexDirection: 'row',
+    },
+
+    hallPriceHeaderTextSec: {
+        fontSize: dimensions.hugeTextSize,
+        color: colors.textColorSec,
+        fontWeight: 'bold',
+
+    },
+        
+
+    
     loginRegisterContainer: {
         flex: 1,
         display: 'flex',
