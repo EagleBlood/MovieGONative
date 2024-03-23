@@ -253,7 +253,7 @@ export default StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: colors.appThirdColor,
+        backgroundColor: colors.appFirstColor,
 
     },
 
@@ -283,10 +283,8 @@ export default StyleSheet.create({
     },
 
     hallSeatsDiv: {
-        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.appWhite,
     },
 
     hallFlatList: {
@@ -302,11 +300,12 @@ export default StyleSheet.create({
     hallSeatItem: {
         backgroundColor: colors.appFirstColor,
         padding: dimensions.buttonPadding,
-        width: dimensions.seatItemWidth,
         aspectRatio: 1,
         margin: dimensions.seatItemMargin,
         justifyContent: 'center',
         alignItems: 'center',
+        width: dimensions.seatItemWidth, // Replace with the desired width
+        height: dimensions.seatItemHeight, // Replace with the desired height
     },
 
     hallSeatsSelectionContainer: {

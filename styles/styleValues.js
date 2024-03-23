@@ -13,6 +13,7 @@ export const dimensions = {
     itemPadding: 10,
 
     seatItemWidth: '10%',
+    seatItemHeight: '10%',
     seatItemMargin: '0.5%',
 };
 
