@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import 'react-native-screens';
-import React from 'react';
+import React,{useEffect} from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -14,6 +14,7 @@ import ForgotPass from './screens/ForgotPass';
 import Register from './screens/Register';
 import ForgotEmail from './screens/ForgotEmail';
 import styles from './styles/styleApp.js';
+import SplashScreen from 'react-native-splash-screen';
 
 type RootStackParamList = {
   Home: undefined;
@@ -31,6 +32,9 @@ type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 function App(): React.JSX.Element {
+  useEffect(() => {
+    SplashScreen.hide();
+  });
   return (
       <SafeAreaView style={styles.container}>
         <StatusBar/>
