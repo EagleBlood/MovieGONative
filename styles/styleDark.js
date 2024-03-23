@@ -9,6 +9,12 @@ export default StyleSheet.create({
         padding: dimensions.appPadding,
         backgroundColor: colors.appBg,
       },
+
+    containerNoPadding: {
+        flex: 1,
+        backgroundColor: colors.appBg,
+      },
+
     headerText: {
         fontSize: dimensions.largeTextSize,
         color: colors.textColor,
@@ -17,8 +23,25 @@ export default StyleSheet.create({
         flexWrap: 'wrap',
         flexShrink: 1,
     },
+    headerTextSec: {
+        fontSize: dimensions.largeTextSize,
+        color: colors.textColorSec,
+
+        // EXPERIMENTAL
+        flexWrap: 'wrap',
+        flexShrink: 1,
+    },
     text: {
         color: colors.textColor,
+        fontSize: dimensions.normalTextSize,
+
+        // EXPERIMENTAL
+        flexWrap: 'wrap',
+        flexShrink: 1,
+    },
+
+    textSec: {
+        color: colors.textColorSec,
         fontSize: dimensions.normalTextSize,
 
         // EXPERIMENTAL
@@ -244,6 +267,77 @@ export default StyleSheet.create({
 
     movieDetailsDescDiv: {
         paddingBottom: dimensions.itemPadding,
+    },
+
+    hallSelectionContainer: {
+        padding: dimensions.appPadding,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        flex: 1,
+    },
+
+    hallTitleDiv: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    hallSeatsDiv: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.appWhite,
+    },
+
+    hallFlatList: {
+        
+    },
+
+    hallSeatsDescDiv: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+
+    hallSeatItem: {
+        backgroundColor: colors.appFirstColor,
+        padding: dimensions.buttonPadding,
+        width: dimensions.seatItemWidth,
+        aspectRatio: 1,
+        margin: dimensions.seatItemMargin,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    hallSeatsSelectionContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: dimensions.appPadding,
+        backgroundColor: colors.appWhite,
+        borderTopLeftRadius: dimensions.buttonRadius,
+        borderTopRightRadius: dimensions.buttonRadius,
+    },
+
+    hallSeatAvailable: {
+        backgroundColor: colors.appBg,
+        borderColor: colors.appFirstColor,
+        borderWidth: 3,
+        padding: dimensions.buttonPadding,
+        borderRadius: dimensions.buttonRadius,
+
+    },
+
+    hallSeatReserved: {
+        backgroundColor: colors.appFirstColor,
+        padding: dimensions.buttonPadding,
+        borderRadius: dimensions.buttonRadius,
+    },
+
+    hallSeatSelected: {
+        backgroundColor: colors.appSecColor,
+        padding: dimensions.buttonPadding,
+        borderRadius: dimensions.buttonRadius,
     },
     
 });

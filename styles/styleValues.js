@@ -11,6 +11,9 @@ export const dimensions = {
 
     itemMargin: 15,
     itemPadding: 10,
+
+    seatItemWidth: '10%',
+    seatItemMargin: '0.5%',
 };
 
 export const colors = {
@@ -18,5 +21,7 @@ export const colors = {
     appFirstColor: '#333333',  // dark grey     | buttonsInactive
     appSecColor: '#FC094B',    // pink          | buttonsActive, highlights
     appThirdColor: '#ADADAD',  // light grey    | inputOutlines
+    appWhite: '#FFFFFF',       // white
     textColor: 'white',
+    textColorSec: 'black',
 };
