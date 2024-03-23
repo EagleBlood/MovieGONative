@@ -57,7 +57,7 @@ const Hall = () => {
   const navigation = useNavigation<NavigationProp>();
 
   return (
-    <View style={styles.containerNoPadding}>
+    <ScrollView style={styles.containerNoPadding}>
 
       <View style={styles.hallSelectionContainer}>
           
@@ -91,19 +91,26 @@ const Hall = () => {
       </View>
 
       <View style={styles.hallSeatsSelectionContainer}>
-        <View>
-          <Text style={styles.headerTextSec}>Wybrane miejsca</Text>
+        <View style={styles.hallItemDiv}>
+          <Text style={styles.hallTitleItemText}>Wybrane miejsca:</Text>
+          <Text style={styles.hallScoreItemText}>|info|</Text>
         </View>
 
-        <ScrollView>
-          <View>
-
+        <View style={styles.hallSelectedSeatsDiv}>
+          <View style={styles.hallSelectedSeatsItem}>
+            <Text style={styles.hallSelectedSeatsItemText}>|row/col|</Text>
+            <Text style={styles.textSec}>|ticketType|</Text>
+            <Text style={styles.textDim}>cena:</Text>
+            <Text style={styles.textSec}>|price|</Text>
           </View>
+        </View>
 
-          <View>
-
-          </View>
-        </ScrollView>
+        <View style={styles.hallSelectedSeatsFinalizeDiv}>
+          <Text style={styles.hallPriceHeaderTextSec}>|totalPrice|</Text>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.text}>Kup bilet</Text>
+          </TouchableOpacity>
+        </View>
 
       </View>
 
@@ -112,7 +119,7 @@ const Hall = () => {
 
 
       {/*<Button title="Go to Home" onPress={() => navigation.navigate('Home')} />*/}
-    </View>
+    </ScrollView>
   );
 };
 

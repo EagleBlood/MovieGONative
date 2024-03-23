@@ -29,7 +29,9 @@ const MovieDetails = () => {
             <Text style={styles.text}>|movieScore|</Text>
           </View>
 
-          <Button title="Kup bilet" onPress={() => navigation.navigate('Hall')} />
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Hall')}>
+            <Text style={styles.text}>Kup bilet</Text>
+          </TouchableOpacity>
 
           <View style={styles.movieDetailsTypeDiv}>
             <Text style={styles.text}>|movieType|</Text>
