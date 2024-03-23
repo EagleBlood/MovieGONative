@@ -13,8 +13,8 @@ type RootStackParamList = {
 
 type NavigationProp = StackNavigationProp<RootStackParamList, 'Hall'>;
 
-const numRows = 4;
-const numColumns = 5;
+const numRows = 8;
+const numColumns = 9;
 
 // Generate some mock data
 const data = Array.from({ length: numRows * numColumns }, (_, i) => ({
@@ -68,6 +68,7 @@ const Hall = () => {
 
         <View style={styles.hallSeatsDiv}>
           <FlatList
+            contentContainerStyle={{ alignItems: 'center' }}
             data={data}
             renderItem={renderItem}
             keyExtractor={(item) => item.id.toString()}
