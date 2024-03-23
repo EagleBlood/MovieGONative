@@ -5,7 +5,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import styles from '../styles/styleDark.js';
 import tw from 'twrnc';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {colors} from "../styles/styleValues.js";
+import {colors} from '../styles/styleValues.js';
 
 type RootStackParamList = {
     Login: undefined;

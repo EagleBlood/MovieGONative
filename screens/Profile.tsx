@@ -49,7 +49,7 @@ const Profile = () => {
     };
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container2}>
             <View style={styles.gapContainer}>
                 <Text style={styles.headerText}>Witaj, |username|</Text>
                 <View style={styles.separator}/>

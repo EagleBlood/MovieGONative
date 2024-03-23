@@ -10,6 +10,11 @@ export default StyleSheet.create({
         backgroundColor: colors.appBg,
       },
 
+    container2: {
+        flex: 1,
+        backgroundColor: colors.appBg,
+    },
+
     containerNoPadding: {
         flex: 1,
         backgroundColor: colors.appBg,
@@ -59,7 +64,7 @@ export default StyleSheet.create({
     },
 
     button: {
-        backgroundColor: colors.appFirstColor,
+        backgroundColor: colors.appSecColor,
         borderRadius: dimensions.buttonRadius,
         padding: dimensions.buttonPadding,
         margin: 5,
