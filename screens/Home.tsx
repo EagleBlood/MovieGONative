@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
     Button,
     Modal,
@@ -12,6 +12,12 @@ import {
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Buffer } from 'buffer';
 import styles from '../styles/styleDark';
+
+interface ItemLayout {
+    isToday: boolean;
+    x: number;
+    width: number;
+}
 
 type RootStackParamList = {
     Home: undefined;
@@ -30,7 +36,42 @@ type Props = {
   navigation: HomeScreenNavigationProp;
 };
 
+function generateDates() {
+    const dates = [];
+    const today = new Date();
+    const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    const days = ['Niedz.', 'Pon.', 'Wt', 'Śr.', 'Czw.', 'Pt.', 'Sob.'];
+  
+    // 1 week backwards
+    for (let i = 7; i > 0; i--) {
+      const newDate = new Date(today.getTime() - (i * oneDay));
+      dates.push({ day: days[newDate.getDay()], date: newDate.getDate(), isToday: false });
+    }
+  
+    // Today
+    dates.push({ day: days[today.getDay()], date: today.getDate(), isToday: true });
+  
+    // 2 weeks ahead
+    for (let i = 1; i <= 14; i++) {
+      const newDate = new Date(today.getTime() + (i * oneDay));
+      dates.push({ day: days[newDate.getDay()], date: newDate.getDate(), isToday: false });
+    }
+  
+    return dates;
+  }
+
 function Home({ navigation}: Props): React.JSX.Element {
+    const scrollViewRef = useRef<ScrollView | null>(null);
+    const [itemLayouts, setItemLayouts] = useState<ItemLayout[]>([]); // This is the correct place for this line
+    
+    useEffect(() => {
+        const todayIndex = itemLayouts.findIndex(item => item.isToday);
+        if (todayIndex !== -1) {
+            const scrollPosition = itemLayouts.slice(0, todayIndex).reduce((total, item) => total + item.width, 0);
+            scrollViewRef.current?.scrollTo({ x: scrollPosition - (itemLayouts[todayIndex].width / 2), animated: true });
+        }
+    }, [itemLayouts]);
+    
     return (
         <ScrollView style={styles.homeContainer}>
             {/* Welcome div */}
@@ -48,17 +89,21 @@ function Home({ navigation}: Props): React.JSX.Element {
             </View>
 
             {/* Calendar div */}
-            <ScrollView horizontal={true}>
+            <ScrollView horizontal={true} ref={scrollViewRef}>
                 <View style={styles.calendarContainer}>
-                    <View style={styles.calendarItem}>
-                        <Text style={styles.text}>|day|</Text>
-                        <Text style={styles.headerText}>|date|</Text>
-                    </View>
-
-                    <View style={styles.calendarItem}>
-                        <Text style={styles.text}>|day|</Text>
-                        <Text style={styles.headerText}>|date|</Text>
-                    </View>
+                    {generateDates().map((date, index) => (
+                        <View
+                            key={index}
+                            onLayout={(event) => {
+                                const { x, width } = event.nativeEvent.layout;
+                                setItemLayouts(prev => [...prev, { isToday: date.isToday, x, width }]);
+                            }}
+                            style={date.isToday ? styles.calendarItemCurrent : styles.calendarItem}
+                        >
+                            <Text style={styles.text}>{date.day}</Text>
+                            <Text style={styles.headerText}>{date.date}</Text>
+                        </View>
+                    ))}
                 </View>
             </ScrollView>
 

@@ -28,6 +28,9 @@ export const dimensions = {
     separator: 25,
     smallSeparator: 15,
 
+    calendarItemWidth: 70,
+    calendarItemHeight: 80,
+
     iconSize: 20,
 };
 

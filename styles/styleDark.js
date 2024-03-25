@@ -112,10 +112,23 @@ export default StyleSheet.create({
     calendarItem: {
         backgroundColor: colors.appFirstColor,
         alignItems: 'center',
+        justifyContent: 'center',
         padding: dimensions.itemPadding,
         borderRadius: dimensions.buttonRadius,
         marginLeft: dimensions.itemMargin,
+        width: dimensions.calendarItemWidth,
+        height: dimensions.calendarItemHeight,
+    },
 
+    calendarItemCurrent: {
+        backgroundColor: colors.appSecColor,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: dimensions.itemPadding,
+        borderRadius: dimensions.buttonRadius,
+        marginLeft: dimensions.itemMargin,
+        width: dimensions.calendarItemWidth,
+        height: dimensions.calendarItemHeight,
     },
 
 
